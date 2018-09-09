@@ -1,0 +1,2 @@
+this is a test file for python 3.6.5
+this text file is ascii coded

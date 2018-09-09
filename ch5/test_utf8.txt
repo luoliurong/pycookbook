@@ -1,0 +1,4 @@
+﻿this is another test file for python 3.6.5
+this file is coded in utf-8
+
+欢迎来到python 3.6.5
