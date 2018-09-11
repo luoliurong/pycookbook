@@ -1,13 +1,14 @@
 #1. use open() function with mode rt to read a text file.
-filepath = r'C:\Projects\Python\pycookbook\ch5\test_ascii.txt'
-filepath2 = r'C:\Projects\Python\pycookbook\ch5\test_utf8.txt'
-filepath3 = r'C:\Projects\Python\pycookbook\ch5\test_write.txt'
+filedir = r'C:\ATCC\Projects\Research_Learning\PyCookbook\pycookbook\ch5'
+filepath = filedir + r'\test_ascii.txt'
+filepath2 = filedir + r'\test_utf8.txt'
+filepath3 = filedir + r'\test_write.txt'
 with open(filepath, 'rt') as file:
     data = file.read()
     print(data)
 
 #reading with default encoding
-with open(filepath2, 'rt') as f:
+with open(filepath2, 'rt', encoding='utf-8') as f:
     for line in f:
         print(line)
 
@@ -29,8 +30,8 @@ with open(filepath3, 'wt', encoding='utf-8') as f:
 print('*'*100)
 
 #read and write binary file
-filepath = r'C:\Projects\Python\pycookbook\ch5\test1.bin'
-filepath2 = r'C:\Projects\Python\pycookbook\ch5\notexistfile'
+filepath = filedir + r'\test1.bin'
+filepath2 = filedir + r'\notexistfile'
 with open(filepath, 'wb') as f:
     f.write(b'Hello, world!')
     print('binary data has been written')
@@ -52,6 +53,7 @@ if not os.path.exists(filepath2):
         f.write(b'world\n')
 else:
     print('file already exists')
+
 
 print('*'*100)
 
